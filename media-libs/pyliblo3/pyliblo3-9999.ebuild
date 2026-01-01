@@ -1,9 +1,9 @@
 # Copyright 1999-2020 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-PYTHON_COMPAT=( python3_{8..12} )
+PYTHON_COMPAT=( python3_{8..13} )
 DISTUTILS_USE_PEP517=setuptools
 inherit distutils-r1 git-r3
 
@@ -22,9 +22,9 @@ DEPEND="${RDEPEND}
 	dev-python/cython[${PYTHON_USEDEP}]"
 #	<dev-python/cython-3[${PYTHON_USEDEP}]"
 
-PATCHES=(
-	"${FILESDIR}/${P}_pointer-type.patch"
-	"${FILESDIR}/${P}_gitignore.patch"
-)
+#PATCHES=(
+#	"${FILESDIR}/${P}_gitignore.patch"
+#)
+#	"${FILESDIR}/${P}_pointer-type.patch"
 
 distutils_enable_tests unittest
